@@ -16,6 +16,10 @@
                             {{ form.username }}
                         </div>
                         <div class="form-group my-3 d-flex flex-column align-items-center justify-content-center">
+                            <label for="{{ form.email.id_for_label }}">Email:</label>
+                            {{ form.username }}
+                        </div>
+                        <div class="form-group my-3 d-flex flex-column align-items-center justify-content-center">
                             <label for="{{ form.password.id_for_label }}">Password:</label>
                             {{ form.password1 }}
                         </div>
@@ -26,6 +30,7 @@
                         <span>{{ form.errors.password2 }}</span>
                         <div class="text-center my-3">
                             <button type="submit" class="btn btn-success">Sign Up</button>
+                            <button class="btn btn-secondary" type="reset ">Reset</button>
                         </div>
                         <input type="hidden" name="next" value="{% url 'quotes:index' %}"/>
                     </form>
